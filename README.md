@@ -41,7 +41,7 @@ Stop the Spring Boot server once testing is complete.
 
 
 ## Program 
-
+```
 simple-web-server/
 ├── src/
 │   └── main/
@@ -52,48 +52,71 @@ simple-web-server/
 │       └── resources/
 │           └── application.properties
 ├── pom.xml
-
+```
  ### Pom.xml
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>4.0.6</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>simple-web-server</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>simple-web-server</name>
+	<description/>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+	<properties>
+		<java.version>21</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc</artifactId>
+		</dependency>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webmvc-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
-    <groupId>com.example</groupId>
-    <artifactId>simple-web-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>Simple Web Server</name>
-    <description>Demo project for Spring Boot Web Server</description>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.2</version>
-        <relativePath/>
-    </parent>
-
-    <dependencies>
-        <!-- Spring Boot Web -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>
+
+```
+
 
 ### DemoApplication.java
 
+
+```
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
@@ -105,9 +128,11 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 }
-
+```
 
 ### HelloController.java
+```
+
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -122,7 +147,7 @@ public class HelloController {
     }
 }
 
-
+```
 ### application.properties:
 
  server.port=8081
@@ -130,6 +155,7 @@ public class HelloController {
 
 
 
-Output:
+## Output:
+<img width="960" height="495" alt="Screenshot 2026-06-07 131712" src="https://github.com/user-attachments/assets/35eca188-edc6-4999-8556-add2f98a72f6" />
 
 
