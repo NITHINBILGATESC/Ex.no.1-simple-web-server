@@ -158,4 +158,6 @@ public class HelloController {
 ## Output:
 <img width="960" height="495" alt="Screenshot 2026-06-07 131712" src="https://github.com/user-attachments/assets/35eca188-edc6-4999-8556-add2f98a72f6" />
 
+## Result:
+Thus, the program in Simple Web Server using Spring Boot is executed as successfully.
 
